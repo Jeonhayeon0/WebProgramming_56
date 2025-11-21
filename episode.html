@@ -15,37 +15,154 @@
         <a href="index.html">ABOUT</a>
         <a href="STORY.html">STORY</a>
         <a href="EPISODE.html">EPISODE</a>
-        <a href="HUNTERS.html">HUNTERS</a>
     </nav>
 
-    <!-- MAIN -->
+    <main class="episode-main">
+
+        <!-- EPISODE 메인 제목 -->
+        <section class="episode-title-section">
+          <h1 class="episode-title orbit">EPISODE</h1>
+        </section>
+      
+        <!-- Ep1 Section -->
+        <section class="episode-section">
+          <div class="section-box">
+      
+            <!-- arc header -->
+            <div class="arc-header"><br>
+              <h2 class="arc-title orbit-stroke">Hunter Exam Arc</h2>
+            </div>
+      
+            <div class="arc-covers">
+              <img src="./Media/ep1_1.webp" alt="">
+              <img src="./Media/ep1_2.webp" alt="">
+              <img src="./Media/ep1_3.webp" alt="">
+              <img src="./Media/ep1_4.webp" alt="">
+              <img src="./Media/ep1_5.webp" alt="">
+            </div>
+      
+          </div>
+        </section>
+
+        <!-- Ep2 Section -->
+        <section class="episode-section">
+            <div class="section-box">
+        
+              <!-- arc header -->
+              <div class="arc-header"><br>
+                <h2 class="arc-title orbit-stroke">Heavens Arena Arc</h2>
+              </div>
+        
+              <div class="arc-covers">
+                <img src="./Media/ep2_1.webp" alt="">
+                <img src="./Media/ep2_2.webp" alt="">
+                <img src="./Media/ep2_3.webp" alt="">
+              </div>
+        
+            </div>
+        </section>
+
+        <!-- Ep3 Section -->
+        <section class="episode-section">
+            <div class="section-box">
+        
+              <!-- arc header -->
+              <div class="arc-header"><br>
+                <h2 class="arc-title orbit-stroke">Yorknew City Arc</h2>
+              </div>
+        
+              <div class="arc-covers">
+                <img src="./Media/ep3_1.webp" alt="">
+                <img src="./Media/ep3_2.webp" alt="">
+                <img src="./Media/ep3_3.webp" alt="">
+                <img src="./Media/ep3_4.webp" alt="">
+                <img src="./Media/ep3_5.webp" alt="">
+                <img src="./Media/ep3_6.webp" alt="">
+              </div>
+        
+            </div>
+          </section>
+
+        <!-- Ep4 Section -->
+        <section class="episode-section">
+            <div class="section-box">
+        
+              <!-- arc header -->
+              <div class="arc-header"><br>
+                <h2 class="arc-title orbit-stroke">Greed Island Arc</h2>
+              </div>
+        
+              <div class="arc-covers">
+                <img src="./Media/ep4_1.webp" alt="">
+                <img src="./Media/ep4_2.webp" alt="">
+                <img src="./Media/ep4_3.webp" alt="">
+                <img src="./Media/ep4_4.webp" alt="">
+                <img src="./Media/ep4_5.webp" alt="">
+                <img src="./Media/ep4_6.webp" alt="">
+              </div>
+        
+            </div>
+        </section>
+      </main>      
     
-
-    <!-- FOOTER -->
-    <footer class="site-footer">
+      <!-- FOOTER -->
+      <footer class="site-footer">
         <p>© HUNTER X HUNTER</p>
-    </footer>
-
-    <button id="scrollTopBtn">▲</button>
-
-    <script>
-        const scrollBtn = document.getElementById("scrollTopBtn");
+      </footer>
+    
+      <button id="scrollTopBtn">▲</button>
       
-        window.addEventListener("scroll", () => {
-          if (window.scrollY > 400) {
-            scrollBtn.style.display = "block";
-          } else {
-            scrollBtn.style.display = "none";
-          }
-        });
-      
-        scrollBtn.addEventListener("click", () => {
-          window.scrollTo({
-            top: 0,
-            behavior: "smooth"
+      <script>
+        document.querySelectorAll('.snap-container').forEach(container => {
+        
+          let isScrolling;
+        
+          container.addEventListener('scroll', () => {
+            clearTimeout(isScrolling);
+        
+            isScrolling = setTimeout(() => {
+              // 이미지들
+              const items = Array.from(container.querySelectorAll('img'));
+              const containerCenter = container.scrollLeft + container.offsetWidth / 2;
+        
+              // 가장 가까운 이미지 찾기
+              let closest = null;
+              let closestDistance = Infinity;
+        
+              items.forEach(img => {
+                const imgCenter = img.offsetLeft + img.offsetWidth / 2;
+                const distance = Math.abs(containerCenter - imgCenter);
+        
+                if (distance < closestDistance) {
+                  closestDistance = distance;
+                  closest = img;
+                }
+              });
+        
+              // 해당 이미지 위치로 부드럽게 스크롤
+              if (closest) {
+                container.scrollTo({
+                  left: closest.offsetLeft - container.offsetWidth / 2 + closest.offsetWidth / 2,
+                  behavior: 'smooth'
+                });
+              }
+        
+            }, 120); // 스크롤 멈춘 후 0.12초 뒤에 스냅
           });
         });
-      </script>
-      
-</body>
+    </script>
+        
+    <script>
+        const scrollBtn = document.getElementById("scrollTopBtn");
+    
+        window.addEventListener("scroll", () => {
+          scrollBtn.style.display = window.scrollY > 400 ? "block" : "none";
+        });
+    
+        scrollBtn.addEventListener("click", () => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
+
+    </body>
 </html>
