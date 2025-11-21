@@ -20,7 +20,7 @@ body {
     padding-top: 220px;
 }
 
-/* === FONT ORBIT === */
+/* ===== FONT ORBIT ===== */
 .orbit {
     font-family: 'Orbit', sans-serif;
     color: #000;
@@ -40,7 +40,7 @@ a {
     text-decoration: none;
 }
 
-/* === HEADER ===*/
+/* ===== HEADER ===== */
 header#top {
     position: fixed;
     top: 0;
@@ -198,7 +198,7 @@ nav a:hover {
     font-weight: 700;
 }
 
-/* ===== OP DEPARTURE! ===== */
+/* OP DEPARTURE! */
 .op-section {
     text-align: center;
     margin: 120px 0 60px;
@@ -237,121 +237,74 @@ nav a:hover {
 }
 
 /* ===== STORY ===== */
-.story-section {
-    width: 100%;
-    margin: 0px auto;
+
+/* section Box*/
+.section-box {
+    width: 75%;
+    margin: 120px auto;
+    padding: 60px 40px;
+
     text-align: center;
 }
 
-/* Worldofhunter */
-.story-section {
-    text-align: center;
-    margin: 80px 80px;
+/* 제목 + 밑줄 */
+.section-title {
+    font-size: 4.8rem;
+    margin-bottom: 50px;
 }
 
-/* 텍스트 박스 + 위아래 선 */
-.story-text-box {
-    width: 70%;
-    margin: 0 auto;
-    border-top: 5px solid #000;
-    border-bottom: 5px solid #000;
-    padding: 80px 40px;      /* 선과 텍스트 사이 여백 */
-}
+/* ============================= */
+/* STORY / HUNTER TEXT BOXES     */
+/* ============================= */
 
-.story-section h1 {
-    font-size: 5.0rem;
-    font-weight: 700
-}
-
-/* 안쪽 텍스트 */
-.story-text {
+.story-text,
+.hunter-text,
+.nen-desc {
     font-size: 2rem;
     line-height: 1.8;
 }
 
-/* Worldofhunter */
-.hunter-section {
-    text-align: center;
-    margin: 80px 80px;
-}
-
-/* 텍스트 박스 + 위아래 선 */
+/* STORY/HUNTER 박스 내부 선 */
+.story-text-box,
 .hunter-text-box {
     width: 70%;
     margin: 0 auto;
     border-top: 5px solid #000;
     border-bottom: 5px solid #000;
-    padding: 80px 40px;      /* 선과 텍스트 사이 여백 */
+    padding: 60px 40px;
 }
 
-.hunter-section h1 {
-    font-size: 5.0rem;
-    font-weight: 700
-}
-
-/* 안쪽 텍스트 */
-.hunter-text-box {
-    font-size: 3rem;
-    line-height: 1.8;
-}
-
-/* FOOTER */
-
-.site-footer {
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-
-    padding: 150px 0;
-    margin-top: 120px;
-}
-
-/* Nen */
-
+/* NEN SECTION */
 .nen-section {
-    width: 100%;
-    margin: 80px auto;
+    margin-top: 60px;
     text-align: center;
 }
 
-.nen-section h1 {
-    font-size: 5rem;
-    letter-spacing: 2px;
-    margin-bottom: 20px;   /* 제목 아래 간격 추가 */
+/* 텍스트 박스 없이 설명만 */
+.nen-desc {
+    margin-top: 20px;
 }
 
-.nen-section p {
-    font-size: 2rem;
-    line-height: 1.8;
-    margin-bottom: 20px;   /* 텍스트와 카드 간격 */
-}
-
-.nenCard-section {
+/* NEN CARD GRID */
+.nencard-section {
     width: 100%;
-    margin: 80px auto;
+    margin: 80px 0 120px 0;
     display: flex;
     justify-content: center;
 }
 
-/* 카드 그리드(2행 × 3열) */
 .nen-grid {
     display: grid;
-    grid-template-columns: repeat(3, 270px); /* 가로로 카드 3개 */
-    grid-auto-rows: 350px;                   /* 세로 높이 350px 고정 */
-
-    column-gap: 60px;   /* 가로 간격 */
-    row-gap: 60px;      /* 세로 간격 */
-
-    justify-content: center; /* 전체를 가운데 정렬 */
-    width: 100%;
+    grid-template-columns: repeat(3, 270px);
+    grid-auto-rows: 350px;
+    column-gap: 60px;
+    row-gap: 60px;
+    justify-content: center;
 }
 
-
-/* === 개별 카드 === */
 .nen-card {
     width: 270px;
     height: 350px;
-
     background: #C4DDEE;
     border: 15px solid #F0F0F0;
     border-radius: 20px;
@@ -360,25 +313,28 @@ nav a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    text-align: center;
-    box-sizing: border-box;
 }
 
-/* 카드 제목(라틴 표기) */
 .nen-title {
     font-size: 1.7rem;
     margin-bottom: 5px;
 }
 
-/* 카드의 한국어 표기 */
 .nen-sub {
     font-size: 1.1rem;
     margin-bottom: 20px;
 }
 
-/* 설명 텍스트 */
 .nen-desc {
     font-size: 1rem;
-    line-height: 1.6;
 }
+
+/* ===== FOOTER ===== */
+.site-footer {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 120px 0;
+    margin-top: 160px;
+}
+
