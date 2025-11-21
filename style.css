@@ -330,6 +330,22 @@ nav a:hover {
     line-height: 1.6;
 }
 
+/* 기본 카드 스타일 */
+.nen-card {
+    transition: 
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover: 초록 포인트 제거 + 은은한 그림자 + 자연스러운 상승 */
+.nen-card:hover {
+    transform: translateY(-10px) scale(1.04);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
 
 /* ===== EPISODE ====== */
 
