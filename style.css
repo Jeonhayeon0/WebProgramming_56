@@ -316,17 +316,18 @@ nav a:hover {
 }
 
 .nen-title {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     margin-bottom: 5px;
 }
 
 .nen-sub {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     margin-bottom: 20px;
 }
 
-.nen-desc {
-    font-size: 1rem;
+.nen-card-desc {
+    font-size: 1.2rem;
+    line-height: 1.6;
 }
 
 /* ===== FOOTER ===== */
