@@ -19,7 +19,7 @@
 
     <main class="episode-main">
 
-        <!-- EPISODE 메인 제목 -->
+        <!-- EPISODE -->
         <section class="episode-title-section">
           <h1 class="episode-title orbit">EPISODE</h1>
         </section>
@@ -28,7 +28,6 @@
         <section class="episode-section">
           <div class="section-box">
       
-            <!-- arc header -->
             <div class="arc-header"><br>
               <h2 class="arc-title orbit-stroke">Hunter Exam Arc</h2>
             </div>
@@ -48,7 +47,6 @@
         <section class="episode-section">
             <div class="section-box">
         
-              <!-- arc header -->
               <div class="arc-header"><br>
                 <h2 class="arc-title orbit-stroke">Heavens Arena Arc</h2>
               </div>
@@ -66,7 +64,6 @@
         <section class="episode-section">
             <div class="section-box">
         
-              <!-- arc header -->
               <div class="arc-header"><br>
                 <h2 class="arc-title orbit-stroke">Yorknew City Arc</h2>
               </div>
@@ -87,7 +84,6 @@
         <section class="episode-section">
             <div class="section-box">
         
-              <!-- arc header -->
               <div class="arc-header"><br>
                 <h2 class="arc-title orbit-stroke">Greed Island Arc</h2>
               </div>
@@ -121,11 +117,10 @@
             clearTimeout(isScrolling);
         
             isScrolling = setTimeout(() => {
-              // 이미지들
+              
               const items = Array.from(container.querySelectorAll('img'));
               const containerCenter = container.scrollLeft + container.offsetWidth / 2;
         
-              // 가장 가까운 이미지 찾기
               let closest = null;
               let closestDistance = Infinity;
         
@@ -139,7 +134,6 @@
                 }
               });
         
-              // 해당 이미지 위치로 부드럽게 스크롤
               if (closest) {
                 container.scrollTo({
                   left: closest.offsetLeft - container.offsetWidth / 2 + closest.offsetWidth / 2,
@@ -147,7 +141,7 @@
                 });
               }
         
-            }, 120); // 스크롤 멈춘 후 0.12초 뒤에 스냅
+            }, 120);
           });
         });
     </script>

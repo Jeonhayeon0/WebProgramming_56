@@ -31,7 +31,7 @@ body {
     font-family: 'Orbit', sans-serif;
     font-weight: 400;
 
-    color: #009A44;               /* 내부 텍스트 색(초록) */
+    color: #009A44;               /* 내부 텍스트 색 */
     -webkit-text-stroke: 2px #000;
 }
 
@@ -247,15 +247,10 @@ nav a:hover {
     text-align: center;
 }
 
-/* 제목 + 밑줄 */
 .section-title {
     font-size: 4.8rem;
     margin-bottom: 50px;
 }
-
-/* ============================= */
-/* STORY / HUNTER TEXT BOXES     */
-/* ============================= */
 
 .story-text,
 .hunter-text,
@@ -280,7 +275,6 @@ nav a:hover {
     text-align: center;
 }
 
-/* 텍스트 박스 없이 설명만 */
 .nen-desc {
     margin-top: 20px;
 }
@@ -330,7 +324,7 @@ nav a:hover {
     line-height: 1.6;
 }
 
-/* 기본 카드 스타일 */
+/* nen-card style */
 .nen-card {
     transition: 
         transform 0.3s ease,
@@ -339,13 +333,10 @@ nav a:hover {
     cursor: pointer;
 }
 
-/* Hover: 초록 포인트 제거 + 은은한 그림자 + 자연스러운 상승 */
 .nen-card:hover {
     transform: translateY(-10px) scale(1.04);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
-
-
 
 /* ===== EPISODE ====== */
 
@@ -354,7 +345,7 @@ nav a:hover {
     margin: 0 auto 160px;
 }
 
-/* EPISODE 메인 제목 */
+/* EPISODE title */
 .episode-title-section {
     text-align: center;
     margin: 80px 0 60px;
@@ -365,16 +356,16 @@ nav a:hover {
     letter-spacing: 4px;
 }
 
-/* ===== episode section (story랑 동일한 box 구조) ===== */
+/* episode section */
 .episode-section .section-box {
     width: 85%;
     margin: 80px auto;
     padding: 60px 50px;
     background: rgba(255,255,255,0.7);
-    text-align: left;            /* ← 안의 콘텐츠는 왼쪽 정렬 */
+    text-align: left;
 }
 
-/* ===== arc header ===== */
+/* arc header */
 .arc-header {
     display: flex;
     flex-direction: row;
@@ -383,12 +374,6 @@ nav a:hover {
 
     margin-bottom: 40px;
     padding-left: 40px;          /* ← 왼쪽 공간 만들기 */
-}
-
-/* 왼쪽 Ep1 라벨 */
-.arc-label {
-    font-size: 1.6rem;
-    color: #777;
 }
 
 /* arc title */
@@ -412,7 +397,7 @@ nav a:hover {
     padding-bottom: 20px;
     scroll-behavior: smooth;
 
-    /* 스크롤 스냅 핵심 */
+    /* 스크롤 스냅 */
     scroll-snap-type: x mandatory;
 }
 
