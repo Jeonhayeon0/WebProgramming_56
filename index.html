@@ -7,9 +7,9 @@
 </head>
 <body>
     <header id="top">
-        <a href="#top">
-            <img class="header-logo" src="./Media/HunterXHunter_Logo.webp" alt="HunterXHunter Logo"/>
-        </a>
+        <a href="index.html#top">
+            <img class="header-logo" src="./Media/HunterXHunter_Logo.webp" alt="logo">
+          </a>
     </header>
     <nav class="orbit">
         <a href="index.html">ABOUT</a>
@@ -18,7 +18,7 @@
         <a href="HUNTERS.html">HUNTERS</a>
     </nav>
 
-    <!-- 전체 컨텐츠 래퍼 -->
+    <!-- MAIN -->
     <main class="page-wrapper">
         <section class="about-section">
             <h1 class="orbit-stroke">About HunterXhunter</h1>
@@ -88,5 +88,27 @@
     <footer class="site-footer">
         <p>© HUNTER X HUNTER</p>
     </footer>
+
+    <button id="scrollTopBtn">▲</button>
+
+    <script>
+        const scrollBtn = document.getElementById("scrollTopBtn");
+      
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 400) {
+            scrollBtn.style.display = "block";
+          } else {
+            scrollBtn.style.display = "none";
+          }
+        });
+      
+        scrollBtn.addEventListener("click", () => {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+          });
+        });
+      </script>
+      
 </body>
 </html>

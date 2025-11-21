@@ -7,9 +7,9 @@
 </head>
 <body>
     <header id="top">
-        <a href="#top">
-            <img class="header-logo" src="./Media/HunterXHunter_Logo.webp" alt="HunterXHunter Logo"/>
-        </a>
+      <a href="index.html#top">
+        <img class="header-logo" src="./Media/HunterXHunter_Logo.webp" alt="logo">
+      </a>
     </header>
     <nav class="orbit">
         <a href="index.html">ABOUT</a>
@@ -46,16 +46,29 @@
       
           <div class="hunter-text-box">
             <p class="hunter-text orbit">
-              Gon Freecs discovers that his father, long<br>
-              thought to be dead,<br>
-              is actually a legendary Hunter.<br>
-              Inspired by him, Gon decides to<br>
-              become a Hunter as well<br><br>
-              Together with Killua, Kurapika, and<br>
-              Leorio, Gon steps into a world<br>
-              full of dangerous trials, dark secrets,<br>
-              and morally complex enemies.
-            </p>
+              In <em>Hunter × Hunter</em>, a <strong>Hunter</strong> is a licensed elite
+              capable of entering restricted areas and handling dangerous tasks such as
+              discovering rare creatures, exploring unknown regions, and pursuing criminals.
+            </p><br>
+            <p class="hunter-text orbit">
+              To earn this status, candidates must pass the extremely harsh
+              <strong>Hunter Examination</strong>, which has a success rate of less than
+              one in a hundred thousand. Those who pass receive a Hunter License, granting
+              broad privileges and access to exclusive information.
+            </p><br>
+          
+            <ul class="hunter-text orbit">
+              <li><strong>1-Star Hunter</strong>: Outstanding achievements in a specific field</li>
+              <li>
+                <strong>2-Star Hunter</strong>: Holds an official position and mentors
+                another Hunter to the 1-star level
+              </li>
+              <li>
+                <strong>3-Star Hunter</strong>: Exceptional accomplishments across
+                multiple fields, recognized as top-tier
+              </li>
+            </ul>
+          
           </div>
         </div>
       </section>
@@ -120,5 +133,27 @@
     <footer class="site-footer">
         <p>© HUNTER X HUNTER</p>
     </footer>
+
+    <button id="scrollTopBtn">▲</button>
+
+    <script>
+      const scrollBtn = document.getElementById("scrollTopBtn");
+    
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 400) {
+          scrollBtn.style.display = "block";
+        } else {
+          scrollBtn.style.display = "none";
+        }
+      });
+    
+      scrollBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      });
+    </script>
+    
 </body>
 </html>
