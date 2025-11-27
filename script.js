@@ -32,7 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   
-  
     /* ===== 3. EPISODE 전용 SNAP SCROLL ===== */
     const snapContainers = document.querySelectorAll(".snap-container");
   
@@ -71,5 +70,80 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 120);
       });
     });
+  });
+  
+  document.addEventListener("DOMContentLoaded", () => {
+
+    /* ===== EPISODE IMAGE MODAL + SLIDER ===== */
+    const images = document.querySelectorAll(".arc-covers img");
+    if (images.length > 0) {
+      
+      // 이미지 목록 배열
+      const imgArray = Array.from(images).map(img => img.src);
+      let currentIndex = 0;
+  
+      // 모달 DOM 생성
+      const modal = document.createElement("div");
+      modal.id = "imgModal";
+      modal.innerHTML = `
+        <div class="modal-content">
+          <span class="modal-arrow left">◀</span>
+          <img id="modalImg" src="">
+          <span class="modal-arrow right">▶</span>
+          <span class="modal-close">×</span>
+        </div>
+      `;
+      document.body.appendChild(modal);
+  
+      const modalImg = document.getElementById("modalImg");
+      const closeBtn = document.querySelector(".modal-close");
+      const leftArrow = document.querySelector(".modal-arrow.left");
+      const rightArrow = document.querySelector(".modal-arrow.right");
+  
+      // 모달 열기
+      const openModal = (index) => {
+        currentIndex = index;
+        modalImg.src = imgArray[currentIndex];
+        modal.classList.add("open");
+      };
+  
+      // 모달 닫기
+      const closeModal = () => modal.classList.remove("open");
+  
+      // 클릭한 이미지 → 모달 열기
+      images.forEach((img, i) => {
+        img.addEventListener("click", () => openModal(i));
+      });
+  
+      // 좌우로 이동
+      const showNext = () => {
+        currentIndex = (currentIndex + 1) % imgArray.length;
+        modalImg.src = imgArray[currentIndex];
+      };
+  
+      const showPrev = () => {
+        currentIndex = (currentIndex - 1 + imgArray.length) % imgArray.length;
+        modalImg.src = imgArray[currentIndex];
+      };
+  
+      rightArrow.addEventListener("click", showNext);
+      leftArrow.addEventListener("click", showPrev);
+  
+      // ESC로 닫기 + ← → 키보드 이동
+      document.addEventListener("keydown", (e) => {
+        if (!modal.classList.contains("open")) return;
+  
+        if (e.key === "Escape") closeModal();
+        if (e.key === "ArrowRight") showNext();
+        if (e.key === "ArrowLeft") showPrev();
+      });
+  
+      // 배경 클릭 시 닫기
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) closeModal();
+      });
+  
+      closeBtn.addEventListener("click", closeModal);
+    }
   });
   

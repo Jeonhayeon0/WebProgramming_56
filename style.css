@@ -533,3 +533,56 @@ nav a.active {
     background: #000;
     color: #fff;
 }
+
+/* ===== EPISODE IMAGE MODAL ===== */
+#imgModal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0,0,0,0.75);
+    z-index: 99999;
+}
+
+#imgModal.open {
+    display: flex;
+}
+
+.modal-content {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    max-width: 80vw;
+    max-height: 80vh;
+
+    gap: 20px;
+}
+
+
+#modalImg {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.modal-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.modal-arrow {
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+}
+
