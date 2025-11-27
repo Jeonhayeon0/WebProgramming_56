@@ -26,136 +26,97 @@
       </div>
   </nav>
 
-    <main class="episode-main">
-
-        <!-- EPISODE -->
-        <section class="episode-title-section">
-          <h1 class="episode-title orbit">EPISODE</h1>
-        </section>
-      
-        <!-- Ep1 Section -->
-        <section id="ep1" class="episode-section">
-          <div class="section-box">
-      
-            <div class="arc-header"><br>
-              <h2 class="arc-title orbit-stroke">Hunter Exam Arc</h2>
-            </div>
-      
-            <div class="arc-covers">
-              <img src="./Media/ep1_1.webp" alt="">
-              <img src="./Media/ep1_2.webp" alt="">
-              <img src="./Media/ep1_3.webp" alt="">
-              <img src="./Media/ep1_4.webp" alt="">
-              <img src="./Media/ep1_5.webp" alt="">
-            </div>
-      
+  <main class="episode-main">
+      <!-- EPISODE -->
+      <section class="episode-title-section">
+        <h1 class="episode-title orbit">EPISODE</h1>
+      </section>      
+        
+      <!-- Ep1 Section -->
+      <section id="ep1" class="episode-section">
+        <div class="section-box">
+    
+          <div class="arc-header"><br>
+            <h2 class="arc-title orbit-stroke">Hunter Exam Arc</h2>
           </div>
-        </section>
-
-        <!-- Ep2 Section -->
-        <section id="ep2" class="episode-section">
-            <div class="section-box">
-        
-              <div class="arc-header"><br>
-                <h2 class="arc-title orbit-stroke">Heavens Arena Arc</h2>
-              </div>
-        
-              <div class="arc-covers">
-                <img src="./Media/ep2_1.webp" alt="">
-                <img src="./Media/ep2_2.webp" alt="">
-                <img src="./Media/ep2_3.webp" alt="">
-              </div>
-        
-            </div>
-        </section>
-
-        <!-- Ep3 Section -->
-        <section id="ep3" class="episode-section">
-            <div class="section-box">
-        
-              <div class="arc-header"><br>
-                <h2 class="arc-title orbit-stroke">Yorknew City Arc</h2>
-              </div>
-        
-              <div class="arc-covers">
-                <img src="./Media/ep3_1.webp" alt="">
-                <img src="./Media/ep3_2.webp" alt="">
-                <img src="./Media/ep3_3.webp" alt="">
-                <img src="./Media/ep3_4.webp" alt="">
-                <img src="./Media/ep3_5.webp" alt="">
-                <img src="./Media/ep3_6.webp" alt="">
-              </div>
-        
-            </div>
-          </section>
-
-        <!-- Ep4 Section -->
-        <section id="ep4" class="episode-section">
-            <div class="section-box">
-        
-              <div class="arc-header"><br>
-                <h2 class="arc-title orbit-stroke">Greed Island Arc</h2>
-              </div>
-        
-              <div class="arc-covers">
-                <img src="./Media/ep4_1.webp" alt="">
-                <img src="./Media/ep4_2.webp" alt="">
-                <img src="./Media/ep4_3.webp" alt="">
-                <img src="./Media/ep4_4.webp" alt="">
-                <img src="./Media/ep4_5.webp" alt="">
-                <img src="./Media/ep4_6.webp" alt="">
-              </div>
-        
-            </div>
-        </section>
-      </main>      
-    
-      <!-- FOOTER -->
-      <footer class="site-footer">
-        <p>© HUNTER X HUNTER</p>
-      </footer>
-    
-      <button id="scrollTopBtn">▲</button>
       
-      <script>
-        document.querySelectorAll('.snap-container').forEach(container => {
+          <div class="arc-covers snap-container">
+            <img src="./Media/ep1_1.webp" alt="">
+            <img src="./Media/ep1_2.webp" alt="">
+            <img src="./Media/ep1_3.webp" alt="">
+            <img src="./Media/ep1_4.webp" alt="">
+            <img src="./Media/ep1_5.webp" alt="">
+          </div>
+    
+        </div>
+      </section>
+
+      <!-- Ep2 Section -->
+      <section id="ep2" class="episode-section">
+        <div class="section-box">
+      
+          <div class="arc-header"><br>
+            <h2 class="arc-title orbit-stroke">Heavens Arena Arc</h2>
+          </div>
         
-          let isScrolling;
+          <div class="arc-covers snap-container">
+              <img src="./Media/ep2_1.webp" alt="">
+              <img src="./Media/ep2_2.webp" alt="">
+              <img src="./Media/ep2_3.webp" alt="">
+          </div>
         
-          container.addEventListener('scroll', () => {
-            clearTimeout(isScrolling);
+        </div>
+      </section>
+
+      <!-- Ep3 Section -->
+      <section id="ep3" class="episode-section">
+        <div class="section-box">
         
-            isScrolling = setTimeout(() => {
-              
-              const items = Array.from(container.querySelectorAll('img'));
-              const containerCenter = container.scrollLeft + container.offsetWidth / 2;
+          <div class="arc-header"><br>
+            <h2 class="arc-title orbit-stroke">Yorknew City Arc</h2>
+          </div>
         
-              let closest = null;
-              let closestDistance = Infinity;
+          <div class="arc-covers snap-container">
+            <img src="./Media/ep3_1.webp" alt="">
+            <img src="./Media/ep3_2.webp" alt="">
+            <img src="./Media/ep3_3.webp" alt="">
+            <img src="./Media/ep3_4.webp" alt="">
+            <img src="./Media/ep3_5.webp" alt="">
+            <img src="./Media/ep3_6.webp" alt="">
+          </div>
         
-              items.forEach(img => {
-                const imgCenter = img.offsetLeft + img.offsetWidth / 2;
-                const distance = Math.abs(containerCenter - imgCenter);
+        </div>
+      </section>
+
+      <!-- Ep4 Section -->
+      <section id="ep4" class="episode-section">
+        <div class="section-box">
         
-                if (distance < closestDistance) {
-                  closestDistance = distance;
-                  closest = img;
-                }
-              });
+          <div class="arc-header"><br>
+            <h2 class="arc-title orbit-stroke">Greed Island Arc</h2>
+          </div>
         
-              if (closest) {
-                container.scrollTo({
-                  left: closest.offsetLeft - container.offsetWidth / 2 + closest.offsetWidth / 2,
-                  behavior: 'smooth'
-                });
-              }
+          <div class="arc-covers snap-container">
+            <img src="./Media/ep4_1.webp" alt="">
+            <img src="./Media/ep4_2.webp" alt="">
+            <img src="./Media/ep4_3.webp" alt="">
+            <img src="./Media/ep4_4.webp" alt="">
+            <img src="./Media/ep4_5.webp" alt="">
+            <img src="./Media/ep4_6.webp" alt="">
+          </div>
         
-            }, 120);
-          });
-        });
-    </script>
-        
+        </div>
+      </section>
+    </main>      
+    
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <p>© HUNTER X HUNTER</p>
+    </footer>
+    
+    <button id="scrollTopBtn">▲</button>
+      
     <script src="script.js"></script>
 
-    </body>
+  </body>
 </html>
