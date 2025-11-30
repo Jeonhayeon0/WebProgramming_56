@@ -111,7 +111,50 @@
     
     <!-- FOOTER -->
     <footer class="site-footer">
-      <p>© HUNTER X HUNTER</p>
+      <div class="footer-inner">
+
+        <div class="footer-contact">
+          <h2 class="orbit">Contact</h2>
+          <p class="footer-desc orbit">
+            Have questions about Hunter × Hunter? Feel free to leave a message!<br>
+            (Characters, arcs, Nen abilities — anything you're curious about)
+          </p>
+
+          <form class="contact-form">
+
+            <div class="form-row">
+              <label for="contact-name">Name</label>
+              <input type="text" id="contact-name" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-row">
+              <label for="contact-email">Email</label>
+              <input type="email" id="contact-email" name="email" placeholder="Your email for reply" required>
+            </div>
+
+            <div class="form-row">
+              <label for="contact-topic">Topic</label>
+              <select id="contact-topic" name="topic">
+                <option value="character">Characters / Relationships</option>
+                <option value="nen">Nen Abilities</option>
+                <option value="arc">Arcs / Story</option>
+                <option value="world">Worldbuilding / Lore</option>
+                <option value="etc">Other</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" name="message" rows="4"
+                placeholder="Ex) I want to know more about how Nen rules work in Chimera Ant arc!"></textarea>
+            </div>
+
+            <button type="submit" class="contact-submit orbit">SEND</button>
+          </form>
+        </div>
+
+        <p class="footer-copy orbit">© HUNTER × HUNTER</p>
+      </div>
     </footer>
     
     <button id="scrollTopBtn">▲</button>
