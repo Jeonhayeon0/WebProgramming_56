@@ -145,5 +145,34 @@ document.addEventListener("DOMContentLoaded", () => {
   
       closeBtn.addEventListener("click", closeModal);
     }
+
+        /* ===== CONTACT FORM JS ===== */
+        const contactForm = document.querySelector(".contact-form");
+
+        if (contactForm) {
+          contactForm.addEventListener("submit", (e) => {
+            e.preventDefault(); // Stop default submission
+    
+            const formData = new FormData(contactForm);
+    
+            const data = {
+              name: formData.get("name"),
+              email: formData.get("email"),
+              topic: formData.get("topic"),
+              message: formData.get("message"),
+              page: window.location.pathname
+            };
+    
+            console.log("Contact form data:", data);
+    
+            // Temporary alert (before PHP/MySQL connection)
+            alert("Your message has been submitted! (Currently in JS test mode)");
+    
+            contactForm.reset();
+          });
+        }
+    
+    
+    
   });
   

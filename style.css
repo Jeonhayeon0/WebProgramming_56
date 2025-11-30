@@ -499,15 +499,6 @@ nav a.active {
     box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
-/* ===== FOOTER ===== */
-.site-footer {
-    background: #000;
-    color: #fff;
-    text-align: center;
-    padding: 120px 0;
-    margin-top: 160px;
-}
-
 /* ===== Top Button ===== */
 #scrollTopBtn {
     position: fixed;
@@ -585,4 +576,114 @@ nav a.active {
     cursor: pointer;
     user-select: none;
 }
+
+/* ===== FOOTER ===== */
+.site-footer {
+    background: #000;
+    color: #fff;
+    padding: 80px 0 40px;
+    margin-top: 160px;
+}
+
+.footer-inner {
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.footer-contact h2 {
+    font-size: 2.3rem;
+    margin-bottom: 10px;
+}
+
+.footer-desc {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+/* ===== CONTACT FORM ===== */
+.site-footer,
+.site-footer * {
+    color: #fff !important;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 0.95rem;
+}
+
+.form-row label {
+    font-weight: 600;
+    color: #fff;
+}
+
+/* 공통 입력 스타일 */
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: 1px solid #444;
+    background: #111;
+    color: #fff;
+    font-size: 0.95rem;
+    font-family: inherit;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #888;
+}
+
+/* focus 효과 */
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--green);
+    box-shadow: 0 0 0 2px rgba(0,154,68,0.4);
+}
+
+/* 버튼 */
+.contact-submit {
+    align-self: flex-start;
+    margin-top: 5px;
+    padding: 10px 26px;
+    border-radius: 999px;
+    border: 2px solid #fff;
+
+    background: #fff;
+    color: #000 !important;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.contact-submit:hover {
+    background: #000;
+    color: #fff !important;
+    border-color: #fff;
+    transform: translateY(-2px);
+}
+
+/* copyright */
+.footer-copy {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    text-align: center;
+    opacity: 0.6;
+}
+
 
