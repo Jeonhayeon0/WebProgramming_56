@@ -29,66 +29,39 @@
       
 
     <!-- MAIN -->
-    <main class="page-wrapper">
-        <section class="about-section">
-            <h1 class="orbit-stroke">About HunterXhunter</h1>
-        </section>
-
-        <section class="info-card">
-            <div class="info-card-inner">
-          
-            <div class="info-poster">
-                <img src="./Media/hxh_poster1.webp" alt="Hunter x Hunter Poster">
-            </div>
-        
-              <div class="info-table-wrap">
-                <table class="info-table">
-                  <tbody>
-                    <tr>
-                      <th>Genre</th>
-                      <td>Action, Adventure, Fantasy</td>
-                    </tr>
-                    <tr>
-                      <th>Writer</th>
-                      <td>Yoshihiro Togashi</td>
-                    </tr>
-                    <tr>
-                      <th>Publisher</th>
-                      <td>Shueisha</td>
-                    </tr>
-                    <tr>
-                      <th>Label</th>
-                      <td>Jump Comics</td>
-                    </tr>
-                    <tr>
-                      <th>Serialization period</th>
-                      <td>1998 –</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-          
-            </div>
-          </section>
-
-        <!-- OP 섹션 -->
-        <section class="op-section">
-            <h1 class="orbit">HUNTERXHUNTER OP</h2><br>
-            
-            <div class="video-img">
-                <a target="_blank" href="https://www.youtube.com/watch?v=S--eqySHiJM">
-                  <img src="./Media/departure.jpeg" alt="Departure!" height="500" width="auto">
-                </a>                  
-            </div><br>
-            <div class="op-video-wrapper">
-                <a class="op-video-link" 
-                   href="https://www.youtube.com/watch?v=S--eqySHiJM"
-                   target="_blank" rel="noopener noreferrer">
-                  ▶ Departure! (YouTube)
-                </a>
-            </div><br>
+    <main class="page-wrapper tmi-page">
+        <section class="tmi-hero">
+            <h1 class="orbit tmi-title">Curious About<br>Hunter × Hunter TMI?</h1>
+            <p class="notice"><br>TOUCH THE IMG</p>
+      
+            <img
+              src="./Media/crown.png"
+              alt="Random TMI clown"
+              class="tmi-clown"
+              id="tmiTrigger">
         </section>
     </main>
+    
+    <!-- RANDOM TMI MODAL -->
+    <div id="tmiModal" class="tmi-modal">
+        <div class="tmi-modal-inner">
+            <span class="tmi-close">&times;</span>
+        
+            <img
+                src="./Media/randTMI.jpeg"
+                alt="Hunter x Hunter TMI"
+                class="tmi-modal-img"
+            >
+        
+            <p class="orbit tmi-text" id="tmiText"></p>
+
+            <div class="tmi-buttons">
+                <button id="tmiRetry" class="orbit tmi-btn">Retry</button>
+                <button id="tmiExit" class="orbit tmi-btn">Exit</button>
+            </div>
+        </div>
+    </div>
+    
 
     <!-- FOOTER -->
     <footer class="site-footer">

@@ -171,6 +171,72 @@ document.addEventListener("DOMContentLoaded", () => {
             contactForm.reset();
           });
         }
+
+    /* ===== RANDOM TMI POPUP ===== */
+    const tmiTrigger = document.getElementById('tmiTrigger');
+    const tmiModal = document.getElementById('tmiModal');
+    const tmiText = document.getElementById('tmiText');
+    const tmiClose = document.querySelector('.tmi-close');
+
+    // HXH TMI
+    const tmiMessages = [
+    '키메라 엔트 편에서 네테로의 나이는 약 120살이며, 메르엠은 생후 40일이었다.',
+    '작가 토가시는 TV를 틀거나 사전을 폈을 때 나오는 단어로 캐릭터들의 이름을 만들었다.',
+    '환영여단 내의 팔씨름 랭킹이 존재한다,',
+    '히소카가 말할 때 나타나는 트럼프 기호는 본인이 선택하는 것이다.',
+    '작가 토가시는 헌터헌터 세계관 지도를 별도로 그려둘 정도로 세계 설정에 집착하는 편이다.',
+    'HunterXHunter는 점프 코믹스 역사상 최초로 연재 기간보다 휴재 기간이 길다.',
+    '크라피카의 과거를 그린 공식 외전 \'크라피카의 추억편\'이 존재한다.',
+    '만화 도쿄 구울 작가 이시다 스이가 히소카의 과거를 그린 단편 만화 \'히소카의 과거\'가 존재한다.'
+    ];
+
+    if (tmiTrigger && tmiModal && tmiText) {
+    // 광대 이미지 클릭
+    tmiTrigger.addEventListener('click', () => {
+        const random = tmiMessages[Math.floor(Math.random() * tmiMessages.length)];
+        typeWriterEffect(random, tmiText, 35); // speed=35ms → 원하는 속도로 조절 가능
+        tmiModal.classList.add('open');
+    });
+
+    // 검은 배경 클릭 → 닫기
+    tmiModal.addEventListener('click', (e) => {
+        if (e.target === tmiModal) {
+        tmiModal.classList.remove('open');
+        }
+    });
+    }
+
+    /* RANDOM TMI BUTTONS */
+    const tmiRetry = document.getElementById('tmiRetry');
+    const tmiExit = document.getElementById('tmiExit');
+
+    // 다시하기
+    tmiRetry.addEventListener('click', () => {
+        const random = tmiMessages[Math.floor(Math.random() * tmiMessages.length)];
+        typeWriterEffect(random, tmiText, 35);
+      });      
+
+    // 닫기
+    tmiExit.addEventListener('click', () => {
+    tmiModal.classList.remove('open');
+    });
+
+    /* TYPEWRITER EFFECT */
+    function typeWriterEffect(text, targetElement, speed = 35) {
+        targetElement.textContent = "";
+        let i = 0;
+    
+        function typing() {
+        if (i < text.length) {
+            targetElement.textContent += text.charAt(i);
+            i++;
+            setTimeout(typing, speed);
+        }
+        }
+        typing();
+    }
+  
+
     
     
     
