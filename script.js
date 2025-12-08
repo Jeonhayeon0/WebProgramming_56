@@ -235,10 +235,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         typing();
     }
-  
 
-    
-    
-    
   });
   
